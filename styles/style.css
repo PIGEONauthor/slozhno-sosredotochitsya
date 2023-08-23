@@ -2,10 +2,14 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  margin: 10px;
+  padding: 10px;
   color: var(--text-color);
   font-family: var(--main-font);
   width: 375px;
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .header {
@@ -33,17 +37,22 @@
 
 .header span {
   position: absolute;
-  inset-inline-end: 38px;
+  inset-inline-end: 17px;
+  inset-block-start: 10px;
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 138.889% */
 }
 
 .header span::after {
   content: '';
-  inline-size: 9px;
-  block-size: 9px;
-  background-color: #FF0070;
-  position: absolute;
-  inset-block-start: 7px;
-  margin-inline-start: 5px;
+  display: inline-block;
+  inline-size: 12px;
+  block-size: 12px;
+  margin-inline-start: 10px;
+  background-color: var(--text-color);
   border-radius: 50%;
   filter: drop-shadow(0px 0px 4px #FF0070);
 }
@@ -51,11 +60,33 @@
 .header__theme-menu {
   justify-self: end;
   margin-block-end: 65px;
+  margin-block-start: 40px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .header__theme-menu-button {
+  height: 26px;
+  padding: 0 13px;
   background-color: initial;
   border: none;
+  text-align: center;
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 100% */
+  text-transform: lowercase;
+  cursor: pointer;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  outline: 1px solid var(--text-color);
 }
 
 .header__title {
@@ -72,11 +103,16 @@
 
 .header__description {
   justify-self: end;
-  background-color: var(--text-color);
-  color: var(--accent-color);
+  
   font-family: var(--main-font, sans-serif);
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px; /* 130% */
+  margin-block-end: 31px;
+}
+
+.title-decor {
+  background-color: var(--text-color);
+  color: var(--accent-color);
 }
