@@ -4,17 +4,21 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   padding: 10px;
   color: var(--text-color);
-  font-family: var(--main-font);
-  width: 375px;
+  font-family: var(--main-font, 'IBM Plex mono', sans-serif);
+  min-inline-size: 375px;
   background-image: url(../images/cover-image-dark.png);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 
+/* ---------------------------HEADER--------------------------- */
+
 .header {
   display: grid;
   grid-template-rows: repeat(3, minmax(min-content, max-content));
+  margin-block-end: 40px;
+  padding-block-end: 10px;
 }
 
 .header::before {
@@ -39,7 +43,7 @@
   position: absolute;
   inset-inline-end: 17px;
   inset-block-start: 10px;
-  font-family: var(--main-font);
+  font-family: var(--main-font, 'IBM Plex mono', sans-serif);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -75,7 +79,7 @@
   background-color: initial;
   border: none;
   text-align: center;
-  font-family: var(--main-font);
+  font-family: var(--main-font, 'IBM Plex mono', sans-serif);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -93,7 +97,7 @@
   justify-self: start;
   color: var(--header-color);
   text-shadow: 4px 4px 0px #FF0070;
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, 'IBM Plex mono', sans-serif);
   font-size: 116px;
   font-style: normal;
   font-weight: 700;
@@ -104,7 +108,7 @@
 .header__description {
   justify-self: end;
   
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, 'IBM Plex mono', sans-serif);
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -115,4 +119,84 @@
 .title-decor {
   background-color: var(--text-color);
   color: var(--accent-color);
+}
+
+/* ---------------------------MAIN--------------------------- */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-block-end: 40px;
+}
+
+.content__text-block {
+  display: grid;
+  grid-template-rows: repeat(auto-fit ,minmax(min-content, max-content));
+  gap: 20px;
+}
+
+.content__header {
+  font-family: var(--main-font, 'IBM Plex mono', sans-serif);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px; /* 130% */
+}
+
+.content__card {
+  font-family: var(--main-font, 'IBM Plex mono', sans-serif);
+  font-size: 18px;
+  line-height: 23.4px; /* 130% */
+  font-style: normal;
+}
+
+.content__card-title {
+  margin-block-end: 10px;
+  font-weight: 700;
+  font-size: inherit;
+}
+
+.content_card-description {
+  color: #F1B2CE;
+  font-weight: 400;
+}
+
+.text-link {
+  text-decoration: none;
+  text-shadow: 2px 1px 0px #FF0070;
+}
+
+.content__card-sub-title {
+  margin-block-end: 10px;
+  font-weight: 400;
+}
+
+.content__gallery {
+  display: grid;
+  grid-template-rows: repeat(auto-fit ,minmax(min-content, max-content));
+  gap: 10px;
+}
+
+.content__gallery-img {
+  inline-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ---------------------------FOOTER--------------------------- */
+
+.footer {
+  padding-block-start: 10px;
+}
+
+.footer__title {
+  color: var(--header-color);
+  text-shadow: 2px 2px 0px #FF0070;
+  font-family: var(--main-font, 'IBM Plex mono', sans-serif);
+  font-size: 116px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%; /* 95.7px */
+  margin: 286px auto;
 }
