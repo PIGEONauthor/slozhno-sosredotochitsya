@@ -4,8 +4,14 @@
 */
 
 :root {
-  --text-color: #FF0070;
-  --accent-color: #000028;
+  --text-color: #F1B2CE;
+  --theme-color: #FF0070;
+  --menu-color: #FF0070;
+  --accent-color: #FF0070;
+  --accent-text-color: #000028;
+  --content-header-color: #FF0070;
+  --rectangle-color: #FF0070;
+  --button-hover: #FF007066;
   --header-color: #DB00FF;
   --main-font: 'IBM Plex mono', sans-serif;
 }
