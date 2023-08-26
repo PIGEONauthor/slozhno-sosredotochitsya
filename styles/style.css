@@ -22,10 +22,17 @@
 /* ---------------------------HEADER--------------------------- */
 
 .header {
+  position: relative;
   display: grid;
-  grid-template-rows: repeat(3, minmax(min-content, max-content));
-  min-height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
   justify-content: space-between;
+  align-items: center;
+  justify-items: end;
+  /*display: flex;
+  flex-direction: column;
+  justify-content: space-around;*/
+  min-height: 100vh;
   margin-block-end: 40px;
   padding-block: 10px;
 }
@@ -33,7 +40,8 @@
 .decorated-zone::before {
   content: '';
   position: absolute;
-  inset-inline-end: 10px;
+  inset-block-start: 10px;
+  inset-inline-end: 0;
   inline-size: 25px;
   block-size: 25px;
   border-block-start: 1px solid var(--rectangle-color, #FF0070);
@@ -42,7 +50,9 @@
 
 .decorated-zone::after {
   content: '';
-  margin-inline-end: auto;
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-end: 10px;
   inline-size: 25px;
   block-size: 25px;
   border-block-end: 1px solid var(--rectangle-color, #FF0070);
@@ -52,7 +62,7 @@
 .header span {
   position: absolute;
   color: var(--theme-color, #FF0070);
-  inset-inline-end: 10px;
+  inset-inline-end: 0px;
   inset-block-start: 10px;
   font-family: var(--main-font, 'IBM Plex mono', sans-serif);
   font-size: 18px;
@@ -93,11 +103,11 @@
 }
 
 .header__theme-menu {
-  margin-inline: 0;
-  justify-self: end;
+  margin: 0;
+  /*justify-self: end;*/
   color: var(--menu-color, #FF0070);
   margin-block-start: 65px;
-  /*margin-block-end: 65px;*/
+  margin-block-end: auto;
 }
 
 .header__theme-menu-list {
@@ -148,13 +158,14 @@
 }
 
 .header__description {
-  justify-self: end;
+  /*justify-self: end;*/
   font-family: var(--main-font, 'IBM Plex mono', sans-serif);
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px; /* 130% */
-  margin-block-end: 31px;
+  margin-block-start: auto;
+  margin-block-end: calc(66px - 10px);
 }
 
 /* ---------------------------MAIN--------------------------- */
@@ -238,31 +249,21 @@
 /* ---------------------------FOOTER--------------------------- */
 
 .footer {
-  /*display: grid;*/
-  padding-block: 10px;
-    
-    /* ----тест---- */
-  block-size: 100vh;
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-    /* ----тест---- */
 }
 
 .footer__title {
-  color: var(--header-color);
+  color: var(--header-color, #DB00FF);
   text-shadow: 2px 2px 0px var(--theme-color, #FF0070);
   font-family: var(--main-font, 'IBM Plex mono', sans-serif);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-style: normal;
   font-weight: 700;
   line-height: 82.5%; /* 95.7px */
-  /*margin: calc(286px - 10px) auto;*/
-  
-    /* ----тест---- */
   margin: auto;
-    /* ----тест---- */
-  
-  /*margin-block-end: calc(286px - 10px - 25px);*/
 }
 
 /* ---------------------------MEDIA--------------------------- */
@@ -274,7 +275,12 @@
   }
   
   .decorated-zone::before {
-    inset-inline-end: 20px;
+    inset-inline-end: 0;
+    inset-block-start: 20px;
+  }
+
+  .decorated-zone::after {
+    inset-block-end: 20px;
   }
 
   .header {
@@ -283,29 +289,23 @@
   }
 
   .header span {
-    inset-inline-end: 20px;
     inset-block-start: 20px;
-  }
-  
-  .header span::after {
-    content: '';
-    margin-inline-end: 7px;
   }
 
   .header__theme-menu {
     margin-block-start: calc(192px - 20px);
-    margin-block-end: 173px;
+    /*margin-block-end: 173px;*/
   }
 
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     transform: translateX(-20px);
-    margin-block-end: 163px;
+    /*margin-block-end: 163px;*/
   }
 
   .header__description {
     width: 364px;
-    margin-block-end: 139px;
+    margin-block-end: calc(183px - 20px);
   }
 
   .content {
@@ -372,7 +372,6 @@
   .header__theme-menu {
     justify-self: center;
     margin-block-start: 0px;
-    margin-block-end: 273px;
   }
   
   .header__theme-menu-list {
@@ -380,14 +379,10 @@
     flex-direction: row;
     gap: 10px;
   }
-
-  .header__title {
-    margin-block-end: 114px;
-  }
   
   .header__description {
     inline-size: 491px;
-    margin-block-end: calc(134px - 20px - 25px);
+    margin-block-end: calc(134px - 20px);
   }
 
   .two-column-block {
@@ -405,10 +400,5 @@
   .diff-column-block .content__card {
     grid-row-start: 2;
   }
-
-  /*.footer__title {
-    margin: calc(319px - 20px) auto;
-    margin-block-end: calc(319px - 25px - 20px);
-  }*/
 
 }
