@@ -1,4 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+body {
+  margin: 0;
+}
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
@@ -10,14 +13,6 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-}
-
-.theme_light {
-  background-image: url('../images/cover-image-light.png');
-}
-
-.theme_dark {
-  background-image: url('../images/cover-image-dark.png');
 }
 
 /* ---------------------------HEADER--------------------------- */
@@ -100,9 +95,9 @@
   
 }
 
-.page:is(.theme_light) > .header span {
+/*.page:is(.theme_light) > .header span {
   display: none;
-}
+}*/
 
 .header__theme-menu {
   margin: 0;
