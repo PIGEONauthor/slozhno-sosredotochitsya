@@ -30,17 +30,17 @@
   
   :root {
     --text-color: #353430;
-  --bg-color: #FFF1F7;
-  --bg-image: url('../images/cover-image-light.png');
-  --theme-color: #FF8DCB;
-  --menu-color: #353430;
-  --accent-color: #FF8DCB;
-  --accent-text-color: #353430;
-  --content-header-color: #353430;
-  --rectangle-color: #353430;
-  --button-hover: #32312D66;
-  --header-color: #FFC2E6;
-  --main-font: 'IBM Plex mono', sans-serif;
+    --bg-color: #FFF1F7;
+    --bg-image: url('../images/cover-image-light.png');
+    --theme-color: #FF8DCB;
+    --menu-color: #353430;
+    --accent-color: #FF8DCB;
+    --accent-text-color: #353430;
+    --content-header-color: #353430;
+    --rectangle-color: #353430;
+    --button-hover: #32312D66;
+    --header-color: #FFC2E6;
+    --main-font: 'IBM Plex mono', sans-serif;
   }
 
   .header span {
