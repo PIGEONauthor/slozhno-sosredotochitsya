@@ -24,6 +24,7 @@
 .header {
   display: grid;
   grid-template-rows: repeat(3, minmax(min-content, max-content));
+  block-size: 100hv;
   margin-block-end: 40px;
   padding-block: 10px;
 }
@@ -69,6 +70,21 @@
   background-color: var(--theme-color, #FF0070);
   border-radius: 50%;
   filter: drop-shadow(0px 0px 4px var(--theme-color, #FF0070));
+  animation: blinking 3s infinite linear;
+}
+
+@keyframes blinking {
+  
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  50% {
+    opacity: 0;
+  }
+  
 }
 
 .page:is(.theme_light) > .header span {
@@ -76,6 +92,7 @@
 }
 
 .header__theme-menu {
+  margin-inline: 0;
   justify-self: end;
   color: var(--menu-color, #FF0070);
   margin-block-start: 65px;
