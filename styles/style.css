@@ -73,6 +73,7 @@
 
 .header span::after {
   content: '';
+  margin: 0;
   display: inline-block;
   inline-size: 12px;
   block-size: 12px;
