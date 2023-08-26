@@ -24,7 +24,8 @@
 .header {
   display: grid;
   grid-template-rows: repeat(3, minmax(min-content, max-content));
-  block-size: 100hv;
+  min-height: 100vh;
+  justify-content: space-between;
   margin-block-end: 40px;
   padding-block: 10px;
 }
@@ -96,7 +97,7 @@
   justify-self: end;
   color: var(--menu-color, #FF0070);
   margin-block-start: 65px;
-  margin-block-end: 65px;
+  /*margin-block-end: 65px;*/
 }
 
 .header__theme-menu-list {
@@ -143,7 +144,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: 82.5%; /* 95.7px */
-  margin-block-end: 55px;
+  /*margin-block-end: 55px;*/
 }
 
 .header__description {
