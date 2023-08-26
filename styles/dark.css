@@ -10,6 +10,8 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --text-color: #F1B2CE;
+  --bg-color: #000028;
+  --bg-image: url('../images/cover-image-dark.png');
   --theme-color: #FF0070;
   --menu-color: #FF0070;
   --accent-color: #FF0070;

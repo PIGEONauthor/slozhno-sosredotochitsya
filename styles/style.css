@@ -5,7 +5,8 @@
   padding: 0 10px;
   color: var(--text-color, #F1B2CE);
   font-family: var(--main-font, 'IBM Plex mono', sans-serif);
-  background-image: url('../images/cover-image-dark.png');
+  background-color: var(--bg-color, #000028);
+  background-image: var(--bg-image);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
