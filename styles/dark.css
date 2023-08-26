@@ -3,7 +3,7 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-.page:is(.theme_light) > .header span {
+.page:is(.theme_dark) > .header span {
   display: block;
 }
 
