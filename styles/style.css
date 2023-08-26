@@ -2,7 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  padding: 0 10px;
+  /*padding: 0 10px;*/
   color: var(--text-color, #F1B2CE);
   font-family: var(--main-font, 'IBM Plex mono', sans-serif);
   background-color: var(--bg-color, #000028);
@@ -24,14 +24,14 @@
   justify-items: end;
   min-height: 100vh;
   margin-block-end: 40px;
-  padding-block: 10px;
+  padding: 10px;
 }
 
 .decorated-zone::before {
   content: '';
   position: absolute;
   inset-block-start: 10px;
-  inset-inline-end: 0;
+  inset-inline-end: 10px;
   inline-size: 25px;
   block-size: 25px;
   border-block-start: 1px solid var(--rectangle-color, #FF0070);
@@ -41,7 +41,7 @@
 .decorated-zone::after {
   content: '';
   position: absolute;
-  inset-inline-start: 0;
+  inset-inline-start: 10px;
   inset-block-end: 10px;
   inline-size: 25px;
   block-size: 25px;
@@ -51,10 +51,8 @@
 
 .header span {
   position: absolute;
-  margin: 0;
-  padding: 0;
   color: var(--theme-color, #FF0070);
-  inset-inline-end: 0px;
+  inset-inline-end: 10px;
   inset-block-start: 10px;
   font-family: var(--main-font, 'IBM Plex mono', sans-serif);
   font-size: 18px;
@@ -159,6 +157,7 @@
 
 .content {
   margin: 0;
+  padding-inline: 10px;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -238,6 +237,7 @@
 
 .footer {
   margin: 0;
+  padding-inline: 10px;
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -258,26 +258,28 @@
 
 @media(width >= 768px) {
   
-  .page {
+  /*.page {
     padding: 0 20px;
-  }
+  }*/
   
   .decorated-zone::before {
-    inset-inline-end: 0;
+    inset-inline-end: 20px;
     inset-block-start: 20px;
   }
 
   .decorated-zone::after {
+    inset-inline-start: 20px;
     inset-block-end: 20px;
   }
 
   .header {
     margin-block-end: 60px;
-    padding-block: 20px;
+    padding: 20px;
   }
 
   .header span {
     inset-block-start: 20px;
+    inset-inline-end: 20px;
   }
 
   .header__theme-menu {
@@ -296,6 +298,7 @@
 
   .content {
     gap: 80px;
+    padding-inline: 20px;
     margin-block-end: 60px;
   }
 
@@ -343,6 +346,7 @@
 
   .footer {
     padding-block: 20px;
+    padding-inline: 20px;
   }
 
   .footer__title {
