@@ -258,10 +258,6 @@
 
 @media(width >= 768px) {
   
-  /*.page {
-    padding: 0 20px;
-  }*/
-  
   .decorated-zone::before {
     inset-inline-end: 20px;
     inset-block-start: 20px;
