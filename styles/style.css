@@ -21,7 +21,8 @@
   justify-content: space-between;
   align-items: center;
   justify-items: end;
-  min-block-size: 100vh;
+  block-size: 100vh;
+  min-block-size: 668px;
   margin-block-end: 40px;
   padding: 10px;
 }
@@ -224,6 +225,10 @@
 
 @media(width >= 768px) {
   
+  .header {
+    min-block-size: 1024px;
+  }
+
   .decorated-zone::before {
     inset-inline-end: 20px;
     inset-block-start: 20px;
@@ -319,6 +324,10 @@
 
 @media(width >= 1024px) {
   
+  .header {
+    min-block-size: 768px;
+  }
+
   .header__theme-menu {
     justify-self: center;
     margin-block-start: 0px;
