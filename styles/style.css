@@ -225,10 +225,6 @@
 /* ---------------------------MEDIA--------------------------- */
 
 @media(width >= 768px) {
-  
-  .header {
-    min-block-size: 1024px;
-  }
 
   .decorated-zone::before {
     inset-inline-end: 20px;
@@ -241,6 +237,7 @@
   }
 
   .header {
+    min-block-size: 1024px;
     margin-block-end: 60px;
     padding: 20px;
   }
