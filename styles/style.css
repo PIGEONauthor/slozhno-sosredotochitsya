@@ -208,7 +208,8 @@
 .footer {
   padding-inline: 10px;
   position: relative;
-  min-block-size: 100vh;
+  block-size: 100vh;
+  min-block-size: 668px;
   display: flex;
 }
 
@@ -312,6 +313,7 @@
   }
 
   .footer {
+    min-block-size: 1024px;
     padding-block: 20px;
     padding-inline: 20px;
   }
@@ -358,6 +360,10 @@
 
   .diff-column-block .content__card {
     grid-row-start: 2;
+  }
+
+  .footer {
+    min-block-size: 768px;
   }
 
 }
